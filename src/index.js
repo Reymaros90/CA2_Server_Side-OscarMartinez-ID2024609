@@ -1,4 +1,10 @@
 // index.js
+/*
+  CSV Import Script
+  - Reads personal_information.csv
+  - Validates records
+  - Inserts valid rows into MySQL database
+*/
 
 const fs = require("fs");
 const path = require("path");
@@ -109,6 +115,7 @@ async function main() {
 
   const inserted = await insertBatch(validRows);
 
+  // CSV processing and validation summary
   console.log("CSV import complete.");
   console.log("Valid rows:", validCount);
   console.log("Invalid rows:", invalidCount);
