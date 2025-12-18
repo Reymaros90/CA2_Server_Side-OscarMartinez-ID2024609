@@ -1,5 +1,13 @@
 // server.js
 
+/*
+  CA2 Server Side Programming
+  Express server handling:
+  - Form display
+  - Input validation
+  - Database insertion
+*/
+
 const express = require("express");
 const path = require("path");
 const helmet = require("helmet");
@@ -31,6 +39,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "form.html"));
 });
 
+// Handles form submission and validates user input before DB insert
 app.post("/submit", (req, res) => {
   const first_name = String(req.body.first_name || "").trim();
   const second_name = String(req.body.second_name || "").trim();
