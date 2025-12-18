@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CA2 - Personal Information</title>
+</head>
+<body>
+  <h1>Personal Information</h1>
+
+  <form method="POST" action="/submit">
+    <label>First name</label><br />
+    <input type="text" name="first_name" maxlength="20" required /><br /><br />
+
+    <label>Second name</label><br />
+    <input type="text" name="second_name" maxlength="20" required /><br /><br />
+
+    <label>Email</label><br />
+    <input type="email" name="email" required /><br /><br />
+
+    <label>Phone</label><br />
+    <input type="text" name="phone" maxlength="10" required /><br /><br />
+
+    <label>Eircode</label><br />
+    <input type="text" name="eir_code" maxlength="6" required /><br /><br />
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
