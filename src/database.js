@@ -1,4 +1,10 @@
 // database.js
+/*
+  Database module
+  - Creates MySQL connection pool
+  - Verifies database connectivity
+  - Ensures required table schema exists
+*/
 
 require("dotenv").config();
 const mysql = require("mysql2/promise");
@@ -18,7 +24,7 @@ async function checkDatabase() {
   return rows[0].ok === 1;
 }
 
-// Ensure required table exists (schema check)
+// Creates the required database table if it does not already exist
 async function ensureSchema() {
   const sql = `
     CREATE TABLE IF NOT EXISTS mysql_table (
